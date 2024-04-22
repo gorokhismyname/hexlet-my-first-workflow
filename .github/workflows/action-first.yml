@@ -6,4 +6,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: make say-hello
+      - name: Checkout repository
+        uses: actions/checkout@v2 # This step checks out the repository
+        
+      - name: Run make say-hello
+        run: make say-hello
